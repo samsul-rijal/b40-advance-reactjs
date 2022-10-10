@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import DetailAbout from "../components/DetailAbout";
 
 // import component
 
@@ -17,6 +18,11 @@ function About() {
         tortor.
       </p>
       {/* code here */}
+      <DetailAbout
+        title="Success.ltd"
+        summary="No. 1 Automobile company in USA"
+        total={1300}
+      />
     </Container>
   );
 }
