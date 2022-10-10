@@ -1,5 +1,8 @@
 // import React Bootstrap components
 import { Form, Col } from "react-bootstrap";
+import Card from "./Card";
+import {users} from '../dataDummy/users'
+
 
 // import css modules
 import cssModules from "./Form.module.css";
@@ -76,20 +79,11 @@ function FormComponent() {
           </Form.Group>
         </div>
 
-        <div className="row">
-          <div className="form-group col-md-4">
-            <label htmlFor="" className="form-label">Name</label>
-            <input type="text" className="form-control" />
+        {users.map((item,index) => (
+          <div key={index}>
+            <Card name={item.name} address={item.address} image={item.image} />
           </div>
-          <div className="form-group col-md-4">
-            <label htmlFor="" className="form-label">Name</label>
-            <input type="text" className="form-control" />
-          </div>
-          <div className="form-group col-md-4">
-            <label htmlFor="" className="form-label">Name</label>
-            <input type="text" className="form-control" />
-          </div>
-        </div>
+        ))}
       </form>
     </div>
   )
